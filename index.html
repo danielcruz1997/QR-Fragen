@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragen und Antworten</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { text-align: center; margin-top: 50px; }
+        .answer { display: none; margin-top: 20px; }
+        button { padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="question">Frage:</h1>
+        <p id="questionText"></p>
+        <button onclick="showAnswer()">Lösung anzeigen</button>
+        <p class="answer" id="answer"></p>
+    </div>
+    <script>
+        const questions = [
+            { question: "Was ist die Hauptstadt von Frankreich?", answer: "Paris" },
+            { question: "Was ist 2 + 2?", answer: "4" },
+            { question: "Wie heißt der höchste Berg der Welt?", answer: "Mount Everest" },
+            { question: "Was ist die größte Wüste der Welt?", answer: "Sahara" },
+            { question: "Welches Tier ist das größte Landtier?", answer: "Afrikanischer Elefant" }
+        ];
+
+        function getRandomQuestion() {
+            const randomIndex = Math.floor(Math.random() * questions.length);
+            return questions[randomIndex];
+        }
+
+        function showQuestion() {
+            const randomQuestion = getRandomQuestion();
+            document.getElementById('questionText').innerText = randomQuestion.question;
+            document.getElementById('answer').innerText = randomQuestion.answer;
+            document.getElementById('answer').style.display = 'none';
+        }
+
+        function showAnswer() {
+            document.getElementById('answer').style.display = 'block';
+        }
+
+        // Initial load
+        showQuestion();
+    </script>
+</body>
+</html>
