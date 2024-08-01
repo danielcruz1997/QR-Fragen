@@ -28,7 +28,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="showQuestion()">
     <div class="container">
         <h1 id="question">Frage:</h1>
         <p id="questionText"></p>
@@ -117,5 +117,13 @@
         function showQuestion() {
             const randomQuestion = getRandomQuestion();
             document.getElementById('questionText').innerText = randomQuestion.question;
-            document.getElementBy
+            document.getElementById('answer').innerText = randomQuestion.answer;
+        }
+
+        function showAnswer() {
+            document.getElementById('answer').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
 
