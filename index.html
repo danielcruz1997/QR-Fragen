@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fragen und Antworten</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap">
     <style>
-        body { font-family: Arial, sans-serif; }
-        .container { text-align: center; margin-top: 50px; }
-        .answer { display: none; margin-top: 20px; }
-        button { padding: 10px 20px; font-size: 16px; }
+        body { 
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: red;
+            color: white;
+            font-weight: 700;
+        }
+        .container { 
+            text-align: center; 
+            margin-top: 50px; 
+        }
+        .answer { 
+            display: none; 
+            margin-top: 20px; 
+        }
+        button { 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            font-weight: 700;
+        }
     </style>
 </head>
 <body>
@@ -81,12 +97,11 @@
             { question: "Wie viele Monate haben 31 Tage?", answer: "7" },
             { question: "Wie viele Beine hat eine Spinne?", answer: "8" },
             { question: "Wie viele Farben hat der Regenbogen?", answer: "7" },
-            { question: "Wie viele Inseln hat Griechenland?", answer: "Griechenland hat 3054 Inseln." },
+            { question: "Wie viele Inseln hat Griechenland?", answer: "3054" },
             { question: "Was sind Crevetten?", answer: "Garnelen" },
             { question: "In welchem Jahr wurde Barack Obama Präsident der USA?", answer: "2009" },
-            { question: "Wie viele Elemente gibt es im Periodensystem?", answer: "118" },
             { question: "Welche Krankheit war auf Piratenschiffen weit verbreitet?", answer: "Skorbut" },
-            { question: "Wie viele Punkte hat ein Würfel insgesamt?", answer: "" },
+            { question: "Wie viele Punkte hat ein Würfel insgesamt?", answer: "21" },
             { question: "In welchem Jahr erschien der Film Harry Potter und der Stein der Weisen?", answer: "2001" },
             { question: "Wie lange hat Goethe an seinem Werk „Faust“ gearbeitet?", answer: "64 Jahre" },
             { question: "Was misst man in Newton?", answer: "Kraft" },
@@ -106,11 +121,5 @@
         }
 
         function showAnswer() {
-            document.getElementById('answer').style.display = 'block';
-        }
+            document.getElementById
 
-        // Initial load
-        showQuestion();
-    </script>
-</body>
-</html>
